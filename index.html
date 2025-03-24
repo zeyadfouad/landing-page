@@ -1,182 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="هذه ثهي صفحة هبوط لعد تنازلي لنشر التطبيق">
-    <title>قريباً الانطلاق</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7862430595763234"
-     crossorigin="anonymous"></script>
+    <title>تطبيق التسبيح</title>
+    <style>
+        /* أنماط الأزرار */
+        .notification-btn {
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 15px auto;
+        }
+        
+        #requestPermissionBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #sendNotificationBtn {
+            background-color: #2196F3;
+            color: white;
+            display: none;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .notification-status {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .granted {
+            background-color: #dff0d8;
+            color: #3c763d;
+            display: block;
+        }
+        
+        .denied {
+            background-color: #f2dede;
+            color: #a94442;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    
-    <header>
-        <div class="brand">
-            <div class="logo">
-                <img src="image/logo1.png" alt="logo">
-            </div>
-            <div class="slogo">
-                <img src="image/logo2.png" alt="slogo">
-            </div>
-        </div>
-        <div class="heading-page">
-            <h1>انتظروا انطلاق التطبيق قريباً</h1>
-            <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-        </div>
-        <div class="count-down">
-            <div class="counter">
-                <span class="count-amount" id="months"></span>
-                <span class="count-period">أشهر</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="days"></span>
-                <span class="count-period">أيام</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="hours"></span>
-                <span class="count-period">ساعات</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="minutes"></span>
-                <span class="count-period">دقائق</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="seconds"></span>
-                <span class="count-period">ثواني</span>
-            </div>
-        </div>
-        <div class="send-notifiction">
-            <p>هل تريد إرسال إشعار فور الإنطلاق</p>
-            <form class="needs-validation" novalidate>
-                <div class="input-group">   
-                    <input type="email" class="form-control" placeholder="البريد الالكتروني" required>
-                    <button type="submit" class="btn"><img src="image/send1.png" alt=""></button>
-                    <div class="invalid-feedback">
-                        عذراً، يرجى إدخال البريد الالكتروني
-                    </div>
-                </div>
-             
-            </form>
-        </div>
-    </header>
-    <main> 
-        <section class="features">
-            <div class="container">
-                <h2>مميزات اللعبة</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/prush.png" alt="pursh icon">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h4>تصميم أنيق وعصري</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/phone.png" alt="phone icon">
-                            </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4>اللعبة متوفرة بوضع الشاشة الممتلئ</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/photo.png" alt="phone icon">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h4>يوجد صور لتوضيح تفاصيل اللعبة</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/mail.png" alt="phone icon">
-                            </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4>يمكنك إرسال الهدايا لأصدقائك عبر العبة</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/fork.png" alt="phone icon">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h4>يمكنك مشاركة اللعبة كمجموعة</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="image/person-plus.png" alt="phone icon">
-                            </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4>إضافة أصدقاء جدد لاستخدام اللعبة</h4>
-                              <p>     هو ببساطة نص (بمعنى أن الغاية هي الشكل وليس المحتوى) و يستخدم في صناعات المطابع</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-notification">
-            <h3>قم بإضافة بريدك الالكتروني ليصلك إشعار فور الإنطلاق</h3>
-            <form class="needs-validation" novalidate>
-                <div class="input-group">
-                    <input type="email" class="form-control" placeholder="البريد الالكتروني" required>
-                    <button type="submit" class="btn"><img src="image/send2.png" alt="send icon"></button>
-                    <div class="invalid-feedback">
-                        عذراً، يرجى إدخال البريد الالكتروني
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="social-media">
-            <h3>تابعنا على وسائل التواصل الإجتماعي</h3>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </li>
-            </ul>
-            <hr>
-            <a href="mailto:zeyadcoding@gmail.com" class="email">
-                <i class="fa-solid fa-envelope"></i>
-                zeyadcoding@gmail.com
-            </a>
-        </div>
-    </footer>
-   
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+
+    <h1>تسبيح لله</h1>
+
+    <div id="notificationStatus" class="notification-status"></div>
+
+    <button id="requestPermissionBtn" class="notification-btn">طلب إذن الإشعارات</button>
+    <button id="sendNotificationBtn" class="notification-btn">إرسال إشعار تجريبي</button>
+
+    <div id="mobileTips" style="display: none; margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 5px;">
+        <h3>ملاحظات هامة للهواتف:</h3>
+        <p>1. تأكد من أنك لا تستخدم وضع التصفح الخاص</p>
+        <p>2. قد يحتاج الإذن إلى طلب يدوي من إعدادات المتصفح</p>
+        <p>3. بعض المتصفحات لا تدعم الإشعارات على الهاتف</p>
+    </div>
+
+<script>
+    const requestPermissionBtn = document.getElementById('requestPermissionBtn');
+    const sendNotificationBtn = document.getElementById('sendNotificationBtn');
+    const notificationStatus = document.getElementById('notificationStatus');
+    const mobileTips = document.getElementById('mobileTips');
+
+    // كشف إذا كان الجهاز هاتف محمول
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    // عرض نصائح للهاتف إذا كان الجهاز محمولاً
+    if (isMobileDevice()) {
+        mobileTips.style.display = 'block';
+    }
+
+    // دالة لطلب الإذن
+    function requestNotificationPermission() {
+        // طريقة متوافقة مع جميع الأجهزة
+        if ('Notification' in window) {
+            Notification.requestPermission().then(permission => {
+                handlePermission(permission);
+                
+                // طريقة بديلة لبعض متصفحات الهاتف
+                if (permission === 'default') {
+                    alert('يرجى السماح بالإشعارات من إعدادات المتصفح إذا لم يظهر طلب الإذن');
+                }
+            }).catch(err => {
+                console.error('حدث خطأ:', err);
+                alert('تعذر طلب الإذن. يرجى المحاولة مرة أخرى أو التحقق من إعدادات المتصفح');
+            });
+        } else {
+            notificationStatus.textContent = 'المتصفح لا يدعم الإشعارات';
+            notificationStatus.className = 'notification-status denied';
+            alert('عذرًا، متصفحك لا يدعم خدمة الإشعارات');
+        }
+    }
+
+    // دالة للتعامل مع نتيجة الإذن
+    function handlePermission(permission) {
+        if (permission === 'granted') {
+            notificationStatus.textContent = 'تم تفعيل الإشعارات بنجاح ✓';
+            notificationStatus.className = 'notification-status granted';
+            requestPermissionBtn.style.display = 'none';
+            sendNotificationBtn.style.display = 'block';
+            
+            // إرسال إشعار ترحيبي
+            setTimeout(() => {
+                sendNotification('شكرًا لك!', 'تم تفعيل الإشعارات بنجاح.');
+            }, 1000);
+        } else {
+            notificationStatus.textContent = 'الإشعارات غير مفعلة ❌';
+            notificationStatus.className = 'notification-status denied';
+            sendNotificationBtn.style.display = 'none';
+            
+            if (permission === 'denied') {
+                alert('لن تتمكن من تلقي الإشعارات إلا إذا سمحت بالإذن. يمكنك تغيير هذا الإعداد في إعدادات المتصفح');
+            }
+        }
+    }
+
+    // دالة إرسال الإشعار
+    function sendNotification(title, body) {
+        if (Notification.permission === 'granted') {
+            try {
+                new Notification(title, {
+                    body: body,
+                    icon: 'https://cdn-icons-png.flaticon.com/128/1828/1828640.png',
+                    vibrate: [200, 100, 200]
+                });
+            } catch (e) {
+                console.error('Error showing notification:', e);
+                alert('حدث خطأ في عرض الإشعار. قد لا يدعم جهازك هذه الميزة');
+            }
+        } else {
+            alert('ليس لديك إذن لإرسال الإشعارات بعد');
+        }
+    }
+
+    // أحداث النقر
+    requestPermissionBtn.addEventListener('click', requestNotificationPermission);
+    sendNotificationBtn.addEventListener('click', () => {
+        sendNotification('إختبار الإشعارات', 'هذا إشعار تجريبي لتأكد من عمل الإشعارات على جهازك');
+    });
+
+    // التحقق من حالة الإذن عند التحميل
+    window.addEventListener('load', () => {
+        if ('Notification' in window) {
+            if (Notification.permission === 'granted') {
+                handlePermission('granted');
+            } else if (Notification.permission === 'denied') {
+                handlePermission('denied');
+            }
+        }
+    });
+
+    // حل إضافي لمتصفحات الهاتف
+    document.addEventListener('click', function(e) {
+        if (e.target.id === 'requestPermissionBtn' && isMobileDevice()) {
+            setTimeout(() => {
+                if (Notification.permission === 'default') {
+                    alert('على الهواتف، قد تحتاج إلى السماح بالإشعارات يدويًا من إعدادات المتصفح');
+                }
+            }, 1000);
+        }
+    });
+</script>
+
 </body>
 </html>
